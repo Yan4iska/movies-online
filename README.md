@@ -1,1 +1,1 @@
-imp
+search as kinopoisk
