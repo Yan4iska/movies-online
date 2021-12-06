@@ -64,7 +64,7 @@
 
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="navbar-brand">Document</a>
+            <a href="index.php" class="navbar-brand">Document</a>
         </div>
     </nav>
     
