@@ -9,7 +9,7 @@ function apiSearch(event) {
         movie.innerHTML = '<h2 class="cool-12 text-center text-danger">Ничего не найдено<h2>';
         return;
     }
-    const server = 'https://api.themoviedb.org/3/search/multi?api_key=815608f57b90d92461c07f9abcdb54d9&language=ru&query=' + searchText;
+    const server = 'https://api.themoviedb.org/3/search/movie?api_key=815608f57b90d92461c07f9abcdb54d9&language=ru&query=' + searchText;
     const movieserver = 'https://api1638625672.synchroncode.com/embed/movie/';
     movie.innerHTML = '<div class="spinner"></div>';
 

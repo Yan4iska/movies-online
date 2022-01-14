@@ -9,64 +9,36 @@
     <title>test</title>
 </head>
 <body>
-    <style>
-        h1, h2, h3, h4, h5{
-            color:aliceblue;
-        }
 
-        body{
-            background-color: rgb(51, 37, 37);
-        }
-        p{
-            color:aliceblue;
-        }
 
-        img{
-            max-width: 100%;
-        }
-        .item{
-            margin: 15px 0;
-            text-align: center;
-            
-        }
-        .spinner{
-            margin: 0 auto;
-            width: 100px;
-            height: 100px;
-            border: 10px solid ;/*dashed - вместо solid это полосочки*/
-            border-radius: 50%;
-            border-left-color: transparent;
-            border-top-color: #aaa;
-            border-right-color: #555;
-            border-bottom-color: #000;
-            animation: spin 500ms infinite linear;
-        }
-        @keyframes spin {
-            100%{
-                transform: rotate(360deg);
-            }
-        }
-        
-        .img_poster {
-            height: 360px;
-        }
-
-        .top {
-            margin-bottom: 50px;
-        }
-        .movie{
-            width: 400px;
-            height: 400px;
-        }
-    </style>
-
-    <header></header>
-
-    <nav class="navbar">
+<header>
+<div class="logo">
+<nav class="navbar">
         <div class="container">
-            <a href="index.html" class="navbar-brand">Document</a>
+            <a href="index.php" class="navbar-brand"><h1>MovieLab</h1></a>
         </div>
     </nav>
+</div>
+
+<div class="top-menu">
+<ul>
+<li><a class="clickMenu" href="#">Темы</a></li>
+<li><a href="#">Об авторах</a></li>
+<li><a href="#">Обратная связь</a></li>
+</ul>
+</div>
+
+<div class="block-top-auth">
+<?php
+          if($_COOKIE['user'] == ''):
+        ?>
+<p><a href="login/sig.php">Вход/Регистрация</a></p>
+<?php else: ?>
+        <p>Пользователь <?=$_COOKIE['user']?>. <br> <a href="/login/php/exit.php">выйти</a></p>
+    <?php endif; ?>
+</div>
+
+</header>
     
     <div class="container top">
             <h3 class="text-center">поиск фильмов</h3>
@@ -82,7 +54,70 @@
         </div>
     </div>
 
-    <footer></footer>
+    <footer id="footer" class="footer-1">
+<div class="main-footer widgets-dark typo-light">
+<div class="container">
+<div class="row">
+   
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="widget subscribe no-box">
+<h5 class="widget-title">Тестовый проект<span></span></h5>
+<p>Создан студентами fefu </p>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="widget no-box">
+<h5 class="widget-title">Ссылки<span></span></h5>
+<ul class="thumbnail-widget">
+<li>
+<div class="thumb-content"><a href="#.">MovieDB</a></div>  
+</li>
+<li>
+<div class="thumb-content"><a href="#.">Кинопоиск</a></div>  
+</li>
+
+
+</ul>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="widget no-box">
+<h5 class="widget-title">О проекте<span></span></h5>
+<p>подробности по номеру <br> +7 (999)-777-44-99</p>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+
+<div class="widget no-box">
+<h5 class="widget-title">Наши контакты<span></span></h5>
+
+<p><a href="#" title="glorythemes">SomeoneLinks.com</a></p>
+<ul class="social-footer2">
+<li class=""><a title="youtube" target="_blank" href="/"><img alt="youtube" width="30" height="30" src=""></a></li>
+<li class=""><a href="/" target="_blank" title="Facebook"><img alt="Facebook" width="30" height="30" src=""></a></li>
+<li class=""><a href="/" target="_blank" title="Twitter"><img alt="Twitter" width="30" height="30" src=""></a></li>
+<li class=""><a title="instagram" target="_blank" href="/"><img alt="instagram" width="30" height="30" src=""></a></li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+   
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-center">
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui aliquid sapiente inventore pariatur possimus temporibus, libero neque provident aut eaque fuga necessitatibus quis, unde corporis ad nulla doloremque delectus! Maxime.</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
 
     <script src="./script.js"></script>
 </body>
