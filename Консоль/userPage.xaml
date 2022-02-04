@@ -1,0 +1,71 @@
+﻿<Window x:Class="UserApp.userPage"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:local="clr-namespace:UserApp"
+		mc:Ignorable="d"
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+		Title="Приложение для пользователя" WindowState="Maximized" MinHeight="600" 
+        MinWidth="1000">
+    <Grid Background="#ffdadada">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="575*"/>
+            <ColumnDefinition Width="186*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="325*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="search_text" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="30" materialDesign:HintAssist.Hint="Write movie" KeyDown="search_text_KeyDown" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="50"></TextBox>
+        <ScrollViewer x:Name="scrol" Grid.Row="1" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+            <StackPanel x:Name="recom" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 0, 0, 40">
+                    <Button Margin="20, 0, 0, 0" Width="320" Height="325" Content="Человек-паук: Нет пути домой" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="https://image.tmdb.org/t/p/w500/3hLU5V1XDF0oHT9YUHvYC4j0Ix5.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Margin="20, 0, 0, 0" Width="320" Height="325" Content="Вечные" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="https://image.tmdb.org/t/p/w500/iCQTxIgEpNYvPfHvEuZkDcmWItU.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Margin="20, 0, 0, 0" Width="320" Height="325" Content="Ледниковый период: Приключения Бака" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="https://image.tmdb.org/t/p/w500/zzXFM4FKDG7l1ufrAkwQYv2xvnh.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Margin="20, 0, 0, 0" Width="320" Height="325" Content="Мы все мертвы" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="https://image.tmdb.org/t/p/w500/q1TtqBl8IJVbMFsvNTeUpaLkNUn.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 0, 0, 40">
+                    <Button Margin="20, 0, 0, 0" Width="320" Height="325" Content="Охотники за привидениями: Наследники" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="https://image.tmdb.org/t/p/w500/qDhhK1M6su9HCzyYnTcEo9APrPv.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Margin="20, 0, 0, 0" Width="320" Height="325" Content="Дом Gucci" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="https://image.tmdb.org/t/p/w500/cNY80q05eaftLTkcudilbp0R8dG.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Margin="20, 0, 0, 0" Width="320" Height="325" Content="Матрица: Воскрешение" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="https://image.tmdb.org/t/p/w500/shapochvzAlkV3obc8jWA1nTobf.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Margin="20, 0, 0, 0" Width="320" Height="325" Content="Энканто" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="https://image.tmdb.org/t/p/w500/yAw00ke7CzSLe4mMuCGkAzma69K.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        </Grid>
+</Window>
